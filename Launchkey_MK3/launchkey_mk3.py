@@ -55,7 +55,7 @@ class Launchkey_MK3(InstrumentControlMixin, NovationBase):
             self._elements.fader_layout_switch.send_value(self._last_fader_layout_byte)
         self._target_track_changed()
         self._drum_group_changed()
-        self._auto_arm.set_enabled(True)
+        self._auto_arm.set_enabled(False)  # (True)
         self.set_feedback_channels([DRUM_FEEDBACK_CHANNEL])
         super(Launchkey_MK3, self).on_identified(midi_bytes)
 
